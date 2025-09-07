@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Job Application: Senior Web Developer</h1>
+    <br>
+
+    <p>Thank you for your interest in joining our team. Please fil out the application below.</p>
+    <hr>
+
+    <form>
+
+        <h2>Personal Information</h2>
+        <label for="name">Full Name: <br></label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+
+        <label for="email">Email: <br></label>
+        <input type="email" name="email" id="email" required>
+        <br></br>
+
+        <label for="phone">Phone: <br></label>
+        <input type="number" name="phone" id="phone" required>
+        <br></br>
+        <label for="linkedin">LinkedIn Profile URL <br></label>
+        <input type="url" name="linkedin" id="linkedin" placeholder="https://linkedin.com/in/your">
+        <hr>
+        <h2>Professional Experience</h2>
+        <p>Uploard Your Resume(PDF or DOCX):</p>
+        <input type="file" name="file"><br><br>
+        <label for="coverletter">Cover Letter <br></label>
+        <textarea name="coverletter" id="coverletter" rows="5" cols="15"
+            placeholder="Tell us why you're a great fit for this role..."></textarea> <br>
+        <label for="exp">Years of Professional Experience: <br></label>
+        <input type="number" name="exp" id="exp" required><br><br>
+
+        <label for="startdate">Earliest Possible Start Date: <br></label>
+        <input type="date" name="startdate" id="startdate">
+        <hr>
+
+        <h2>Skills & Availability</h2>
+        <h3>Primary Skillset( Choose One): <br></h3>
+        <input type="radio" name="priskills" id="fdev" value="Frontend development">
+        <label for="fdev">Frontend Development</label>
+        <br><br>
+
+        <input type="radio" name="priskills" id="bdev" value="Backend development">
+        <label for="bdev">Backend Development</label>
+        <br><br>
+
+        <input type="radio" name="priskills" id="fsdev" value="Fullstack development">
+        <label for="fsdev">Fullstack Development</label>
+        <br><br>
+
+        <h3>Additional skills (select all that apply): <br></h3>
+        <input type="checkbox" name="skills" id="react" value="React">
+        <label for="react">React</label>
+        <br><br>
+
+        <input type="checkbox" name="skills" id="nodejs" value="Node.js">
+        <label for="nodejs">Node.js</label>
+        <br><br>
+
+        <input type="checkbox" name="skills" id="dbms" value="database management">
+        <label for="dbms">database management</label>
+        <br><br>
+
+        <label for="worktype">Preferred work type: <br></label>
+        <select name="worktype" id="worktype">
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Intern">Intern</option>
+        </select>
+        <hr>
+
+        <h2>Final Confirmation</h2>
+        <input type="checkbox" name="confirmation" id="confirmation">
+        <label for="confirmation">I am legally autharized to work in this country. <br></label>
+        <br>
+        <label>How did you hear about us? <br></label>
+        <input type="text" placeholder="e.g LinkedIn,company">
+        <br><br>
+        <button type="submit">submit application</button>
+        <button type="reset">Clear Form</button>
+
+    </form>
+</body>
+
+</html>
