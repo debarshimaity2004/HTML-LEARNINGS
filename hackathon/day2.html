@@ -25,7 +25,7 @@
 
         <h1>Day 2 — HTML Nested Lists & Tables</h1>
         <br>
-        <iframe src="https://youtube/embed/AJ4E1zf5tQs?si=U5gS946eKimZiEJz" height="300px" width="600px"></iframe>
+        <iframe src="https://youtube.com/embed/AJ4E1zf5tQs?si=_0pXs_jhOiLGhIne" height="300px" width="600px"></iframe>
         <section>
             <h2>List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</h2>
             <p>
@@ -145,13 +145,102 @@
                 </li>
             </ol>
         </section>
-        <h1>Tables :-</h1>
         <section>
+            <h2>Tables</h2>
+            <p>You can create a basic table to organize data. The example below shows a simple table with two columns,
+                "Name" and "Favorite Color," and two rows of data.</p>
 
+            <h3>Example Code</h3>
+            <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Favorite Color&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alice&lt;/td&gt;
+        &lt;td&gt;Blue&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Bob&lt;/td&gt;
+        &lt;td&gt;Green&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+            <p>
+                <b>The Tags:</b><br>
+                <b>&lt;table&gt;:</b> The container for the entire table.<br>
+                <b>&lt;tr&gt;:</b> A <b>t</b>able <b>r</b>ow. It holds the cells for a single row.<br>
+                <b>&lt;th&gt;:</b> A <b>t</b>able <b>h</b>eader cell. It's used for column headers and is bold and
+                centered by default.<br>
+                <b>&lt;td&gt;:</b> A <b>t</b>able <b>d</b>ata cell. This is where the actual content of the table goes.
+            </p>
+
+            <h3>Result</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Favorite Color</th>
+                </tr>
+                <tr>
+                    <td>Alice</td>
+                    <td>Blue</td>
+                </tr>
+                <tr>
+                    <td>Bob</td>
+                    <td>Green</td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <h3>Cell Spanning: colspan and rowspan</h3>
+            <p>
+                These attributes are used to make a single table cell span across multiple columns or rows, which is
+                useful for creating more complex table layouts.
+            </p>
+
+            <h4>colspan</h4>
+            <p>The colspan attribute merges a cell across multiple columns. The value specifies how many columns
+                the cell should span.</p>
+
+            <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;Favorite Cars&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ford&lt;/td&gt;
+    &lt;td&gt;Volvo&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+            <p>In this example, the "Favorite Cars" header spans over two columns.</p>
+            <img src="d2d.png" alt="">
+
+            <h4>rowspan</h4>
+            <p>The rowspan attribute merges a cell down across multiple rows. The value specifies how many rows
+                the cell should span.</p>
+
+            <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;td rowspan="2"&gt;Phone&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bill Gates&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Steve Jobs&lt;/td&gt;
+    &lt;td&gt;555 553 4444&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+            <p>Here, the "Phone" cell spans across two rows.</p>
+            <img src="d2e.png" alt="">
         </section>
     </main>
+    <hr>
     <footer>
-        <p>&copy; 2025 HTML Hackathon. All rights reserved.</p>
+        <p>&copy; 2025 HTML Hackathon. All rights reserved.BY DEBARSHI MAITY</p>
     </footer>
 </body>
 

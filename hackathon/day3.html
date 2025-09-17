@@ -22,15 +22,212 @@
     </header>
 
     <main>
-
-
         <h1>Day 3 — File Path in HTML</h1>
         <br>
         <iframe src="https://youtube.com/embed/k78lNSAB8VY?si=KKbkD5B9JMa81wu8" height="300px" width="600px"></iframe>
+        <hr>
+        <section>
+            <h2>File Path in HTML</h2>
+            <p>
+                <b>What it is:</b> File paths are used to link to other files, such as images, stylesheets, or other
+                web pages. They can be absolute (full URL) or relative (path from the current file).
+            </p>
+            <p>
+                <b>Types of File Paths:</b><br>
+                <b>Absolute Path:</b> A full URL that points to a specific location on the web.(Basically full detailed
+                address)<br>
+                <b>Relative Path:</b> A path that is relative to the current file's location. (Basically internal file
+                address)
+            </p>
 
+            <p>
+                <b>/</b>&rarr;andar jaoge <br>
+                <b>../</b>&rarr;bahar jaoge <br>
+            </p>
+
+            <p>
+                <b>NOTE:</b>
+            <ul>
+                <li>Absolute path se pura system ka access kr sakta hai koi bhi,isliye work nhi krta browser me.</li>
+                <li>ekdam bahar jaoge(System me) using relative path. &rarr; wo bhi block ho jayega</li>
+            </ul>
+            </p>
+            <br>
+        </section>
+        <hr>
+        <br>
+
+        <section>
+            <h2>HTML Boilerplate</h2>
+            <p>
+                The HTML boilerplate is the basic, essential structure of any HTML document. It's the starting point for
+                every web page and ensures your page is correctly interpreted by browsers.
+            </p>
+
+            <h3>Example Code</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+            <p>
+                <b>The Tags and Attributes:</b><br><br>
+                <b>&lt;!DOCTYPE html&gt;:</b> This declaration defines the document type and version of HTML, which is
+                HTML5.<br>
+                <br> <b>&lt;html&gt;:</b> The root element of an HTML page. It's the parent tag for all other HTML
+                elements
+                on the page.<br>
+                <br> <b>&lt;html lang="en"&gt;:</b> The lang attribute specifies the <b>language </b> of the document,
+                which
+                helps search engines and accessibility tools.<br>
+                <br> <b>&lt;head&gt;:</b> Contains meta-information about the HTML document, such as its title,
+                character
+                set, and links to stylesheets.<br>
+                <br> <b>&lt;meta charset="UTF-8"&gt;:</b> Specifies the <b>character encoding</b> for the document,
+                ensuring
+                that most characters are displayed correctly.<br>
+                <br> <b>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;:</b> This is
+                crucial for
+                <b>responsive web design</b>. It tells the browser to set the viewport's width to the device's width and
+                set the initial zoom level.<br>
+                <br> <b>&lt;title&gt;:</b> Sets the **title** of the web page, which appears in the browser's title bar
+                or
+                tab.<br>
+                <br> <b>&lt;body&gt;:</b> Contains all the **visible content** of the web page, like headings,
+                paragraphs,
+                images, and links.
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>Why Use a Boilerplate?</h2>
+            <p>
+                You're right that for a simple "Hello World" page, it looks the same. But the boilerplate isn't about
+                making a simple page look right; it's about making a professional, reliable, and future-proof website.
+                The boilerplate is the **proper engineering foundation** for your website. It ensures your site will
+                stand up in any browser, is accessible to everyone, is easy to find, and works on any device.
+            </p>
+
+            <h3>1. Unpredictable Rendering (Quirks Mode)</h3>
+            <p>
+                The biggest danger of omitting the boilerplate is **Quirks Mode**. Without
+                <code>&lt;!DOCTYPE html&gt;</code>, browsers will guess how to render your page, which leads to
+                inconsistent results. Your CSS might work differently across Chrome, Firefox, and Safari because each
+                browser has its own slightly different implementation of Quirks Mode. What looks good on your machine
+                might look broken on someone else's. Using <code>&lt;!DOCTYPE html&gt;</code> puts all browsers into
+                **Standards Mode**, which is predictable and consistent.
+            </p>
+
+            <h3>2. Broken Characters</h3>
+            <p>
+                Your site might look fine until you need to write special characters like "50€" or "resumé". Without
+                <code>&lt;meta charset="UTF-8"&gt;</code>, those characters can easily break, making your site look
+                unprofessional. UTF-8 is the standard character encoding that supports a vast range of international
+                characters and symbols.
+            </p>
+
+            <h3>3. Bad Mobile Experience</h3>
+            <p>
+                Without the <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+                tag, your website will be almost unusable on a mobile phone. It will appear as a tiny, zoomed-out
+                version of the desktop site, forcing users to pinch and zoom to read anything. The viewport meta tag
+                ensures your page is responsive and displays correctly on all devices.
+            </p>
+
+            <h3>4. Poor SEO and Accessibility</h3>
+            <p>
+                Search engines and screen readers rely on the boilerplate tags like <code>&lt;html lang="en"&gt;</code>
+                and <code>&lt;title&gt;</code> to understand your page. A page without them is a "mystery document." It
+                will rank lower in search results and be more difficult for users with disabilities to navigate.
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>Class and ID Attributes</h2>
+            <p>
+                The class and id attributes are used to select specific HTML elements so you can style them with
+                CSS.They act like unique names or labels for your tags.
+            </p>
+
+            <h3>The class Attribute</h3>
+            <p>
+                A <b>Class</b> is used to assign a common name to a group of HTML elements. Multiple elements can have
+                the same class name. This is great for applying the same styling to many different tags.
+            </p>
+
+            <h4>Example Code</h4>
+            <pre><code>&lt;h2 class="section-heading"&gt;About Us&lt;/h2&gt;
+&lt;p class="section-text"&gt;We are a great company.&lt;/p&gt;
+&lt;p class="section-text"&gt;You will love our products.&lt;/p&gt;
+&lt;h2 class="section-heading"&gt;Contact Us&lt;/h2&gt;</code></pre>
+
+            <p>
+                In this example, both <code>&lt;p&gt;</code> tags share the same <code>class="section-text"</code>. This
+                means you could apply the same CSS rule (e.g., a specific font size or color) to both paragraphs at
+                once.
+            </p>
+            <p>Like Below &dArr;</p>
+            <img src="d3a.png" alt="" width="300px">
+
+            <hr>
+
+            <h3>The id Attribute</h3>
+            <p>
+                An id is used to give a unique identifier to a single HTML element. An id must be unique within a
+                page—no two elements should have the same 'id'. They're often used for specific styling or linking to a
+                particular section of a page.
+            </p>
+
+            <h4>Example Code</h4>
+            <pre><code>&lt;h1 id="main-title"&gt;My Awesome Website&lt;/h1&gt;
+&lt;a href="#main-title"&gt;Jump to top&lt;/a&gt;</code></pre>
+
+            <p>
+                Here, the &lt;h1&gt; element has a unique id of "main-title". The link then uses this 'id' in its 'href'
+                to create a jump link to that specific heading on the page.
+            </p>
+
+            <hr>
+
+            <h2>The &lt;div&gt; Tag</h2>
+            <p>
+                The &lt;div&gt; tag is a generic container element. It doesn't have any special meaning on its own but
+                is used to group other HTML elements together. This is extremely useful for applying styles to a group
+                of elements or for creating a logical structure for your webpage layout. Think of it as a box you can
+                put things in.
+            </p>
+
+            <h4>Example Code</h4>
+            <pre><code>&lt;div class="product-card"&gt;
+    &lt;h3&gt;Product 1&lt;/h3&gt;
+    &lt;p&gt;This is a great product.&lt;/p&gt;
+    &lt;a href="#"&gt;Buy Now&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="product-card"&gt;
+    &lt;h3&gt;Product 2&lt;/h3&gt;
+    &lt;p&gt;This is also a great product.&lt;/p&gt;
+    &lt;a href="#"&gt;Buy Now&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+            <p>
+                In this example, each product's heading, paragraph, and link are <b>grouped inside</b> a &lt;div&gt;
+                with the class <b>"product-card"</b>. This allows you to style each card as a single unit using CSS, for
+                example, by adding a border, a background color, or setting a specific width.
+            </p>
+        </section>
     </main>
+    <hr>
     <footer>
-        <p>&copy; 2025 HTML Hackathon. All rights reserved.</p>
+        <p>&copy; 2025 HTML Hackathon. All rights reserved.BY DEBARSHI MAITY</p>
     </footer>
 </body>
 
