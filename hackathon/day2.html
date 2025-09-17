@@ -8,43 +8,48 @@
 </head>
 
 <body>
-    <h2>Access different days from the below as well </h2>
-    <h2>&darr;</h2>
-    <nav>
-        <a href="./index.html">Home</a> |
-        <a href="./day1.html">Day 1</a> |
-        <a href="./day2.html">Day 2</a> |
-        <a href="./day3.html">Day 3</a> |
-        <a href="./day4.html">Day 4</a> |
-        <a href="./day5.html">Day 5</a>
-    </nav>
+    <header>
+        <h2>Access different days from the below as well </h2>
+        <h2>&darr;</h2>
+        <nav>
+            <a href="./index.html">Home</a> |
+            <a href="./day1.html">Day 1</a> |
+            <a href="./day2.html">Day 2</a> |
+            <a href="./day3.html">Day 3</a> |
+            <a href="./day4.html">Day 4</a> |
+            <a href="./day5.html">Day 5</a>
+        </nav>
+    </header>
 
-    <h1>Day 2 — HTML Nested Lists & Tables</h1>
-    <br>
-    <iframe src="https://youtube/embed/AJ4E1zf5tQs?si=U5gS946eKimZiEJz" height="300px" width="600px"></iframe>
-    <section>
-        <h2>List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</h2>
-        <p>
-            <b>What it is:</b> These tags are used to create lists. This is a perfect example of nesting, since
-            <code>&lt;li&gt;</code> elements go inside either <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.
-        </p>
-        <p>
-            <b>The Tags:</b><br>
-            <b>&lt;ul&gt;:</b> An <b>U</b>nordered <b>L</b>ist. Creates a bulleted list.<br>
-            <b>&lt;ol&gt;:</b> An <b>O</b>rdered <b>L</b>ist. Creates a numbered list.<br>
-            <b>&lt;li&gt;:</b> A <b>L</b>ist <b>I</b>tem. Each item in either type of list must be wrapped in an
-            <code>&lt;li&gt;</code> tag.
-        </p>
+    <main>
 
+        <h1>Day 2 — HTML Nested Lists & Tables</h1>
+        <br>
+        <iframe src="https://youtube/embed/AJ4E1zf5tQs?si=U5gS946eKimZiEJz" height="300px" width="600px"></iframe>
         <section>
             <h2>List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</h2>
             <p>
                 <b>What it is:</b> These tags are used to create lists. This is a perfect example of nesting, since
                 <code>&lt;li&gt;</code> elements go inside either <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>.
             </p>
+            <p>
+                <b>The Tags:</b><br>
+                <b>&lt;ul&gt;:</b> An <b>U</b>nordered <b>L</b>ist. Creates a bulleted list.<br>
+                <b>&lt;ol&gt;:</b> An <b>O</b>rdered <b>L</b>ist. Creates a numbered list.<br>
+                <b>&lt;li&gt;:</b> A <b>L</b>ist <b>I</b>tem. Each item in either type of list must be wrapped in an
+                <code>&lt;li&gt;</code> tag.
+            </p>
 
-            <p><b>Syntax for Unordered List (&lt;ul&gt;):</b></p>
-            <pre>
+            <section>
+                <h2>List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</h2>
+                <p>
+                    <b>What it is:</b> These tags are used to create lists. This is a perfect example of nesting, since
+                    <code>&lt;li&gt;</code> elements go inside either <code>&lt;ul&gt;</code> or
+                    <code>&lt;ol&gt;</code>.
+                </p>
+
+                <p><b>Syntax for Unordered List (&lt;ul&gt;):</b></p>
+                <pre>
 &lt;ul&gt;
   &lt;li&gt;Item 1&lt;/li&gt;
   &lt;li&gt;Item 2&lt;/li&gt;
@@ -52,8 +57,8 @@
 &lt;/ul&gt;
   </pre>
 
-            <p><b>Syntax for Ordered List (&lt;ol&gt;):</b></p>
-            <pre>
+                <p><b>Syntax for Ordered List (&lt;ol&gt;):</b></p>
+                <pre>
 &lt;ol&gt;
   &lt;li&gt;First&lt;/li&gt;
   &lt;li&gt;Second&lt;/li&gt;
@@ -61,8 +66,8 @@
 &lt;/ol&gt;
   </pre>
 
-            <p><b>Syntax for Nested List:</b></p>
-            <pre>
+                <p><b>Syntax for Nested List:</b></p>
+                <pre>
 &lt;ul&gt;
   &lt;li&gt;Fruits
     &lt;ul&gt;
@@ -73,79 +78,81 @@
   &lt;li&gt;Vegetables&lt;/li&gt;
 &lt;/ul&gt;
   </pre>
+            </section>
+
+            <p><b>Example:</b></p>
+            <p>Unordered List:</p>
+
+
+            <ul>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Cherries</li>
+            </ul>
+            <p>Ordered List:</p>
+            <ol>
+                <li>Step One</li>
+                <li>Step Two</li>
+                <li>Step Three</li>
+            </ol>
+
+            <p>Nested List:</p>
+
+
+            <ol>
+                <li>
+                    <h3>Breakfast</h2>
+                        <ul>
+                            <li>Main
+                                <ul>
+                                    <li>Mapple</li>
+                                    <li>Freshed</li>
+                                    <li>Whiped</li>
+                                </ul>
+                            </li>
+                            <li>Side</li>
+                            <li>Dinner</li>
+                        </ul>
+                </li>
+                <li>
+                    <h3>Lunch</h2>
+                        <ul>
+                            <li>Main
+                                <ol>
+                                    <li>Start</li>
+                                    <li>Add</li>
+                                    <li>place</li>
+                                    <li>finish</li>
+                                </ol>
+                            </li>
+                            <li>Side</li>
+                            <li>Beverage</li>
+                        </ul>
+                </li>
+                <li>
+                    <h3>Dinner</h2>
+                        <ul>
+                            <li>Appetizer</li>
+                            <li>main
+                                <ol>
+                                    <li>First</li>
+                                    <li>Next</li>
+                                    <li>Finally</li>
+                                </ol>
+                            </li>
+                            <li>Dessert</li>
+                        </ul>
+                </li>
+            </ol>
         </section>
-
-        <p><b>Example:</b></p>
-        <p>Unordered List:</p>
-
-
-        <ul>
-            <li>Apples</li>
-            <li>Bananas</li>
-            <li>Cherries</li>
-        </ul>
-        <p>Ordered List:</p>
-        <ol>
-            <li>Step One</li>
-            <li>Step Two</li>
-            <li>Step Three</li>
-        </ol>
-
-        <p>Nested List:</p>
-
-
-        <ol>
-            <li>
-                <h3>Breakfast</h2>
-                    <ul>
-                        <li>Main
-                            <ul>
-                                <li>Mapple</li>
-                                <li>Freshed</li>
-                                <li>Whiped</li>
-                            </ul>
-                        </li>
-                        <li>Side</li>
-                        <li>Dinner</li>
-                    </ul>
-            </li>
-            <li>
-                <h3>Lunch</h2>
-                    <ul>
-                        <li>Main
-                            <ol>
-                                <li>Start</li>
-                                <li>Add</li>
-                                <li>place</li>
-                                <li>finish</li>
-                            </ol>
-                        </li>
-                        <li>Side</li>
-                        <li>Beverage</li>
-                    </ul>
-            </li>
-            <li>
-                <h3>Dinner</h2>
-                    <ul>
-                        <li>Appetizer</li>
-                        <li>main
-                            <ol>
-                                <li>First</li>
-                                <li>Next</li>
-                                <li>Finally</li>
-                            </ol>
-                        </li>
-                        <li>Dessert</li>
-                    </ul>
-            </li>
-        </ol>
-    </section>
-
-    <section>
         <h1>Tables :-</h1>
-    </section>
+        <section>
 
-
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 HTML Hackathon. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
