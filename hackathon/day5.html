@@ -9,10 +9,11 @@
 
 <body>
     <header>
-        <h2>Access different days from the below as well </h2>
-        <h2>&darr;</h2>
+        <h2>Access different days from the below as well &darr;</h2>
+    
         <nav>
             <a href="./index.html">Home</a> |
+            <a href="./day0.html">Day 0</a> |
             <a href="./day1.html">Day 1</a> |
             <a href="./day2.html">Day 2</a> |
             <a href="./day3.html">Day 3</a> |
@@ -20,12 +21,177 @@
             <a href="./day5.html">Day 5</a>
         </nav>
     </header>
-<hr>
+    <hr>
     <main>
         <h1>Day 5 — Deploy Your First Project</h1>
         <br>
         <iframe src="https://youtube.com/embed/NGYp1zCBthk?si=m3VjGZmTQHRv61uM" height="300px" width="600px"></iframe>
-    <hr>
+
+        <section>
+            <h2>The Core Problem</h2>
+            <p>How can we embed video and audio into a webpage in a standardized, native, and plugin-free way? We need a
+                universal system that works on every modern browser, from a desktop PC to a mobile phone, without
+                requiring the user to install anything extra.
+
+            </p>
+            <h2>The Logical Solution:The HTML &lt;video&gt; and &lt;audio&gt; tag</h2>
+            <p>The solution was to create dedicated HTML tags whose sole purpose is to embed and control media.</p>
+
+        </section>
+        <hr>
+        <section>
+  <h2>The Video and Audio Tags</h2>
+  
+  <p>
+    <b>What they are:</b><br>
+    - <b><code>&lt;video&gt;</code></b>: Used to embed video files into a webpage.<br>
+    <p>
+    <b>Example:</b><br>
+    <code>
+      &lt;video src="LINK" &gt;<br>
+      
+      &lt;/video&gt;
+    </code>
+  </p>
+    - <b><code>&lt;audio&gt;</code></b>: Used to embed audio files into a webpage.<br>
+    <p>
+    <b>Example:</b><br>
+    <code>
+      &lt;audio src="Link"&gt;<br>
+      
+      &lt;/audio&gt;
+    </code>
+  </p>
+    Both support attributes like <code>controls</code>, <code>autoplay</code>, <code>loop</code>, and <code>muted</code>.
+  </p>
+  
+</section>
+<hr>
+<section>
+  <h2>Attributes: controls, autoplay, loop, muted</h2>
+
+  <p>
+    <b>What they are:</b><br>
+    - <code>controls</code>: Adds play, pause, and volume buttons.<br>
+    - <code>autoplay</code>: Starts playing the media automatically when the page loads.<br>
+    - <code>loop</code>: Makes the media start over again after it finishes.<br>
+    - <code>muted</code>: Starts the media in a muted state.<br>
+  </p>
+
+  <p>
+    <b>Example (Video):</b><br>
+    <code>
+      &lt;video width="320" height="240" src="movie.mp4" type="video/mp4"
+      controls autoplay loop muted&gt;<br>
+      &lt;/video&gt;
+    </code>
+  </p>
+
+  <p>
+    <b>Example (Audio):</b><br>
+    <code>
+      &lt;audio src="audio.mp4" type="video/mp4"
+      controls autoplay loop muted&gt;<br>
+      &lt;/audio&gt;
+    </code>
+  </p>
+</section>
+<hr>
+<section>
+    <h2>Other Syntax of &lt;video&gt; and &lt;audio&gt; tag and why it is most used </h2>
+<p>
+  <b>Problem #1: Not all browsers support the same video formats.</b>  
+<br>Chrome might prefer the modern .webm format, while Safari on an iPhone might only support .mp4. If you only provide one src, some of your users won't be able to see your video.
+<br><b>The Solution: The &lt;source&gt; Element</b>
+<br>Instead of putting the src on the &lt;video&gt; tag itself, you can provide multiple formats inside the tag using the &lt;source&gt; element. The browser will go down the list and play the first one it supports.
+</p>
+
+<p>
+  <b>Example (Video):</b><br>
+    <code>
+      &lt;video width="320" height="240" controls autoplay loop muted&gt;<br>
+      &nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+      &nbsp;&nbsp;Your browser does not support the video tag.<br>
+      &lt;/video&gt;
+    </code>  
+</p>
+
+<p>
+   <b>Example (Audio):</b><br>
+    <code>
+      &lt;audio controls autoplay loop muted&gt;<br>
+      &nbsp;&nbsp;&lt;source src="song.mp3" type="audio/mpeg"&gt;<br>
+      &nbsp;&nbsp;Your browser does not support the audio element.<br>
+      &lt;/audio&gt;
+    </code> 
+</p>
+
+<p>
+    <b>Problem #2: Your video is not accessible.</b><br>
+    Users who are deaf or hard of hearing can't understand your video. Users in a noisy environment (or a quiet office) can't listen to the audio. Users speaking another language won't understand it. <br>
+    <b>The Solution: The &lt;track&gt; Element</b><br>
+    The &lt;track&gt; element allows you to add timed text tracks, such as subtitles or captions. It's a self-closing tag that points to a special text file, usually in WebVTT (.vtt) format.
+</p>
+<p>
+    <b>Example:</b>
+    <pre><code>
+&lt;video controls&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+
+  &lt;!-- English Captions for the hearing impaired --&gt;
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+
+  &lt;!-- Spanish Subtitles for translation --&gt;
+  &lt;track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+&lt;/video&gt;
+</code></pre>
+
+</p>
+
+<p>
+    <b>The Robust & Professional Method (&lt;source&gt;)</b><br>
+    &lt;video width="320" height="240" controls&gt;<br>
+  &nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+  &nbsp;&nbsp;&lt;source src="movie.ogg" type="video/ogg"&gt;<br>
+  Your browser does not support the video tag. <br>
+&lt;/video&gt;
+</p>
+
+<p>
+   <h3>How It Works (The Logic)</h3>
+<p>This code gives the browser a <strong>list of options</strong>. The browser will read this list from top to bottom and play the <strong>very first video format it understands</strong>.</p>
+
+<h3>Step 1</h3>
+<p>The browser first sees <code>&lt;source src="movie.mp4" ...&gt;</code>. It asks itself, "Can I play MP4 video?"</p>
+<ul>
+  <li>
+    <strong>If the answer is YES</strong>, it loads <code>movie.mp4</code>, plays it, and <strong>completely ignores the rest of the <code>&lt;source&gt;</code> tags</strong>.
+  </li>
+  <li>
+    <strong>If the answer is NO</strong>, it moves to the next option.
+  </li>
+</ul>
+<br>
+<h3>Step 2</h3>
+<p>The browser then sees <code>&lt;source src="movie.ogg" ...&gt;</code>. It asks, "Okay, can I play Ogg video?"</p>
+<ul>
+  <li>
+    <strong>If the answer is YES</strong>, it loads <code>movie.ogg</code> and plays it.
+  </li>
+  <li>
+    <strong>If the answer is NO</strong>, it has no other options.
+  </li>
+</ul> 
+</p>
+
+<p>Below I have attached a Table from the Notion Notes for better understanding &dArr;</p>
+    <img src="d5a.png" alt="comparison" width="600px" height="400px">
+</section>
+
+<h1>
+    **FINALLY COMPLETED THE HTML HACKATHON WITH AROUND 1400+ LINES OF CODE**Don't believe me? Check <a href="">Github</a>
+</h1>
     </main>
     <hr>
     <footer>

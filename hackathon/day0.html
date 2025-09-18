@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day0</title>
+</head>
+
+<body>
+    <header>
+        <h2>Access different days from the below as well &darr;</h2>
+        <nav>
+            <a href="./index.html">Home</a> |
+            <a href="./day0.html">Day 0</a> |
+            <a href="./day1.html">Day 1</a> |
+            <a href="./day2.html">Day 2</a> |
+            <a href="./day3.html">Day 3</a> |
+            <a href="./day4.html">Day 4</a> |
+            <a href="./day5.html">Day 5</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <h1>How Does Internet Work?</h1>
+        <br>
+        <iframe src="https://youtube.com/embed/1pcikNlDB-4?si=tktbl3tOccZvSNo_" frameborder="0" height="300px"
+            width="600px"></iframe>
+        <section>
+            <h2>Summary from First Principles</h2>
+            <p>
+                As discussed in the initial parts of the video, the internet isn’t magic — it’s a series of logical solutions to fundamental problems:
+            </p>
+            <ol>
+                <li>
+                    <b>Problem:</b> How do we share data between two computers?
+                    <br> <b>Solution:</b> Use a <b>direct physical link</b>.
+                </li><br>
+                <li>
+                    <b>Problem:</b> How do we connect many computers efficiently?
+                    <br> <b>Solution:</b> Create a <b>local network</b> with a central switch.
+                </li><br>
+                <li>
+                    <b>Problem:</b> How do we connect many networks together?
+                    <br> <b>Solution:</b> Build an <b>internetwork</b> using <b>routers</b>.
+                </li><br>
+                <li>
+                    <b>Problem:</b> How do we locate a specific computer in this huge web?
+                    <br> <b>Solution:</b> Assign a universal <b>IP Address</b> to every device.
+                </li><br>
+                <li>
+                    <b>Problem:</b> How do we send data reliably and without errors?
+                    <br> <b>Solution:</b> Use a set of rules (<b>TCP/IP</b>) to break data into small, addressed
+                    <b>packets</b> that can be reassembled correctly.
+                </li><br>
+            </ol>
+        </section>
+        <hr>
+        <section>
+            <h2>IP Address(Internet Protocol Address)</h2>
+            <p>
+                An <b>IPv4 (Internet Protocol v4)</b> address is the classic format we often see.
+            </p>
+            <ul>
+                <li><b>Structure:</b> 32-bit number, shown as four decimals (0–255).
+                    Example: <code>172.217.16.142</code> (Google).
+                </li>
+                <li><b>Limit:</b> Only <b>2<sup>32</sup> ≈ 4.3 billion</b> possible addresses.</li>
+            </ul>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLyExo_h3EN8sbfQ4_QrZW3O5ct9ne-tor0g&s" alt="">
+            <p>
+                When IPv4 was created, 4.3 billion seemed huge, but with today’s devices (phones, laptops, servers,
+                smart gadgets), we ran out quickly.
+                This scarcity is why we have <b>public and private IPs</b>.
+            </p>
+
+            <p>
+                <b>NOTE:</b>
+            <ul>
+                <li>IP address diya jata hai jab mera device ka <b>Internet ON </b>ho.</li>
+                <li>IP address kon deta hai? &rAarr; <b>ISP</b>(Internet Service Provider)</li>
+            </ul>
+            </p>
+<hr>
+            <h3>DNS(Domain Name System)</h3>
+            <p>
+                DNS is the global, distributed system that translates the human-friendly domain names into the
+                computer-friendly IP addresses. Without it, you'd have to memorize hundreds of IP addresses to browse
+                the web
+            </p><br>
+            <img src="d0a.png" alt="DNS architecture" width="600px" height="300px">
+<hr>
+            <h3>MAC Address</h3>
+            <p>
+                A <b>MAC</b> (Medium Access Control) Address is a unique, permanent serial number burned into every
+                network-capable piece of hardware (your laptop's Wi-Fi card, your phone, your smart TV, the network port
+                on your desktop).
+            </p>
+            <p>Jab bhi hum kuch bhejte hai tab structure kuch aaise rehta hai &dArr;</p>
+            <table border="1">
+                <tr>
+                    <th>Sender's IP</th>
+                    <th>Sender's MAC</th>
+                    <th>"Messages"</th>
+                    <th>Reciever's IP</th>
+                    <th>Reciever's MAC</th>
+                </tr>
+            </table>
+<hr>
+            <h3>Port Number</h3>
+            <p>
+                Port numbers are numerical identifiers (0-65535) in computer networking that identify specific
+                applications or services on a device. They work with IP addresses to direct network traffic to the
+                correct service on a machine, with common ports assigned to standard applications like HTTP (port 80)
+                and HTTPS (port 443).
+            </p>
+            <p>
+                <b>Note:</b>
+            <ul>
+                <li>Port number 0-1023 are called <b>Well Known Ports.</b> </li>
+                <li>Port number 1024-49151 are called <b>Registered Ports.</b> </li>
+                <li>Port number 49152-65535 are called <b>Dynamic or Private Ports.</b></li>
+            </ul>
+            </p>
+
+            <p>
+                Final the structure will be like &dArr;
+            </p>
+            <table border="1">
+                <tr>
+                    <th>Sender's IP</th>
+                    <th>Sender's MAC</th>
+                    <th>Sender's Port</th>
+                    <th>"Messages"</th>
+                    <th>Reciever's IP</th>
+                    <th>Reciever's MAC</th>
+                    <th>Reciever's Port</th>
+                </tr>
+            </table>
+<hr>
+            <section>
+                <h3>Public vs Private IP Addresses</h3>
+                <ul>
+                    <li>
+                        <b>Public IP:</b> A unique address assigned by your Internet Service Provider (ISP).
+                        It’s visible on the internet and lets other devices find your network.
+                    </li>
+                    <li>
+                        <b>Private IP:</b> Used inside local networks (like your home Wi-Fi).
+                        Not visible on the internet, allows multiple devices (laptop, phone, TV) to connect through one
+                        public IP.
+                    </li>
+                </ul>
+                <p>
+                    In short: <b>Private IPs</b> work within your network, while <b>Public IPs</b> connect your network
+                    to the wider internet.
+                </p>
+            </section>
+<hr>
+            <section>
+                <h3>Client–Server Architecture</h3>
+                <p>
+                    The internet works on a <b>client–server model</b>. It’s a way of dividing roles between two sides:
+                </p>
+                <ul>
+                    <li>
+                        <b>Client:</b> The user’s device (like a browser or mobile app).
+                        It sends requests — for example, “Show me this webpage.”
+                    </li>
+                    <li>
+                        <b>Server:</b> A powerful computer that stores websites, apps, or data.
+                        It processes the request and sends back the response (like the webpage).
+                    </li>
+                </ul>
+                <p>
+                    In short: <b>Clients ask</b>, <b>Servers provide</b>.
+                </p>
+                <img src="d0b.png" alt="client server architecture" width="600px" height="300px">
+            </section>
+
+        </section>
+
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2025 HTML Hackathon. All rights reserved.BY DEBARSHI MAITY</p>
+    </footer>
+
+</body>
+
+</html>

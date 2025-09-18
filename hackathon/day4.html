@@ -9,10 +9,10 @@
 
 <body>
     <header>
-        <h2>Access different days from the below as well </h2>
-        <h2>&darr;</h2>
+        <h2>Access different days from the below as well &darr;</h2>
         <nav>
             <a href="./index.html">Home</a> |
+            <a href="./day0.html">Day 0</a> |
             <a href="./day1.html">Day 1</a> |
             <a href="./day2.html">Day 2</a> |
             <a href="./day3.html">Day 3</a> |
@@ -36,7 +36,145 @@
                 The web would be a read-only library.
             </p>
 
+            <p><b>Lets get started with the Tags and important porperties they carry!</b></p>
+
         </section>
+
+        <section>
+            <h2>The Form Tag (&lt;form&gt;)</h2>
+            <p>
+                <b>The Purpose:</b> The <code>&lt;form&gt;</code> tag is used to collect user input.
+                It acts as a container for form elements like text fields, checkboxes, buttons, and more.
+                Anything related to forms must be inside this Tag(like we used &lt;table&gt; for tables).
+            </p>
+
+        </section>
+        <hr>
+        <section>
+            <h2>The Label Tag (&lt;label&gt;)</h2>
+            <p>
+                <b>The Purpose:</b> The <code>&lt;label&gt;</code> tag is used to define labels for form elements.
+                Clicking a label focuses the associated input, making forms more accessible and user-friendly.
+            </p>
+            <p>
+                <b>Common Attribute:</b><br>
+                <b>for:</b> Links the label to an input element by matching its <code>id</code>.
+            </p>
+            <p><b>Example:</b> <code>&lt;label for="username"&gt;Username:&lt;/label&gt;</code>
+            </p>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </form>
+        </section>
+<hr>
+        <section>
+            <h2>The Input Tag (&lt;input&gt;)</h2>
+            <p>
+                <b>The Purpose:</b> The <code>&lt;input&gt;</code> tag is used to create interactive controls inside a
+                form.
+                It supports many <code>type</code> values such as <code>text</code>, <code>password</code>,
+                <code>email</code>, <code>checkbox</code>, <code>radio</code>, and <code>submit</code>.
+            </p>
+            <p>
+                <b>Common Attributes:</b><br>
+                <b>type:</b> Defines the input type (text, password, radio, number, submit, checkbox, file, etc.).<br>
+                <b>name:</b> Name of the input (used to send data to the Database/server).<br>
+                <b>value:</b> The default value of the input.(used mostly in radio)<br>
+                <b>id:</b> Unique identifier, often used with <code>&lt;label&gt;</code>.
+            </p>
+            <p><b>Example:</b><br>
+                <code>&lt;label for="email"&gt;Email:&lt;/label&gt;</code><br>
+                <code>&lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;</code><br><br>
+
+                <code>&lt;label for="pwd"&gt;Password:&lt;/label&gt;</code><br>
+                <code>&lt;input type="password" id="pwd" name="pwd"&gt;&lt;br&gt;&lt;br&gt;</code><br><br>
+
+                <code>&lt;input type="submit" value="Login"&gt;</code>
+
+            </p>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd"><br><br>
+
+                <input type="submit" value="Login">
+            </form>
+
+            <p>
+                <b>Placeholder:</b>
+                The attribute shows a short hint or example inside the input box before the user types anything.
+            </p>
+
+            <p>Example:
+
+                <code>&lt;input type="text" placeholder="Enter your name"&gt;</code>
+            </p>
+            <p>
+            <form>
+                <input type="text" placeholder="Enter your name">
+            </form>
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>The Select, Option, and Button Tags</h2>
+
+            <p>
+                <b>What they are:</b><br>
+                - <code>&lt;select&gt;</code>: Creates a drop-down list.<br>
+                - <code>&lt;option&gt;</code>: Defines each item inside the drop-down.<br>
+                - <code>&lt;button&gt;</code>: Creates a clickable button.(mostly submit and reset)<br>
+            </p>
+
+            <p>
+                <b>Example (Dropdown):</b><br>
+                <code>
+      &lt;select name="fruits"&gt;<br>
+      &nbsp;&nbsp;&lt;option value="apple"&gt;Apple&lt;/option&gt;<br>
+      &nbsp;&nbsp;&lt;option value="banana"&gt;Banana&lt;/option&gt;<br>
+      &nbsp;&nbsp;&lt;option value="cherry"&gt;Cherry&lt;/option&gt;<br>
+      &lt;/select&gt;
+    </code>
+
+            </p>
+            <select name="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+            </select>
+            <p>
+                <b>Example (Button):</b><br>
+                <code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code>
+            </p>
+            <button type="submit">Submit</button>
+        </section>
+        <hr>
+        <section>
+            <h2>The Textarea Tag</h2>
+
+            <p>
+                <b>What it is:</b> <code>&lt;textarea&gt;</code> is used when you need multi-line text input, like
+                comments or feedback forms.
+            </p>
+
+            <p>
+                <b>Example:</b><br>
+                <code>
+      &lt;textarea name="message" rows="4" cols="30"&gt;<br>
+      &nbsp;&nbsp;Write your message here...<br>
+      &lt;/textarea&gt;
+    </code>
+            </p>
+            <textarea name="message" rows="4" cols="30">Write your message here...</textarea>
+        </section>
+
+
+<h2>Note:required attribute daaldo jiska answer chahiye he chahiye.</h2>
+
+
     </main>
     <hr>
     <footer>
